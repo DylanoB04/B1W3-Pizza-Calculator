@@ -1,0 +1,52 @@
+<html>	
+	<head>
+		<script>
+
+			//Dylano Brouwer Opdracht: Pizza calculator 
+
+
+			//Begin van pagina, Pizza Shop als naam.
+				document.write("<h1>" + "Pizza Shop" + "<h1>");
+
+			//Alert, client wordt gevraagd om te kiezen hoeveel pizza's hij/zij wilt.
+				alert("kies uit hoeveel pizza's u wilt");
+
+			//Vraagt de client in een prompt hoeveel pizza's hij/zij wilt van elke afmeting.
+				small_pizza_1 = prompt("hoeveel small pizza's wilt u?"); 		
+				medium_pizza_1 = prompt("hoeveel medium pizza's wilt u?"); 
+				large_pizza_1 = prompt("hoeveel large pizza's wilt u?");
+
+			//Zet de antwoorden van de prompts in een (Number) zodat deze worden gezien als cijfers en dus later bij elkeer kunnen worden opgeteld.
+				small_pizza_1=Number(small_pizza_1);
+				medium_pizza_1=Number(medium_pizza_1); 
+				large_pizza_1=Number(large_pizza_1);
+
+			//Prijzen van de pizza afmetingen worden in const gezet zodat de waarde niet kan worden gewijzigd.
+				const PRIJS_SMALLPIZZA=Number(3.99);
+				const PRIJS_MEDIUMPIZZA=Number(6.99);
+				const PRIJS_LARGEPIZZA=Number(11.99);
+
+			//Zet de afmetingen pizza's + hoeveelheden pizza's in een rijtje.
+				document.write("small pizza's" + "=" + small_pizza_1 + "<br>" + "medium pizza's" + "=" + medium_pizza_1 + "<br>" + "large pizza's" + "=" + large_pizza_1 + "<br>");
+
+			//Deze opdracht zorgt ervoor dat de prijs van de afmetingen * hoeveelheden pizza's bij elkaar worden gevoegd in een totaal.
+				totaal_small_pizza = PRIJS_SMALLPIZZA * small_pizza_1;
+				totaal_medium_pizza = PRIJS_MEDIUMPIZZA * medium_pizza_1;
+				totaal_large_pizza = PRIJS_LARGEPIZZA * large_pizza_1;
+
+			//Maakt totalen aan die later worden gebruikt in de berekening als het eindcijfer.
+				totaal_1 = small_pizza_1 + medium_pizza_1 + large_pizza_1;
+				totaal_2 = totaal_small_pizza + totaal_medium_pizza + totaal_large_pizza;
+
+			//Zet de alle gekozen pizza's in een totaal.
+				document.write("<br>" + "totaal aantal pizza's:" + totaal_1 + "<br>");
+
+			//Alert, client wordt vertelt wat zijn/haar totaal is qua geld.
+				alert("uw totaal is:" + "=" + totaal_2); 
+
+			//Zet de afmetingen pizza's + hoeveel het kost in een rijtje.
+				document.write("<br>" + "small pizza:" + totaal_small_pizza + "<br>" + "medium pizza:" + totaal_medium_pizza + "<br>" +  "large pizza:" + totaal_large_pizza + "<br>" + "<br>" + "totaal:" + totaal_2); //berekening word geplaatst in pagina.
+		
+		</script>
+	</head>
+</html>	
